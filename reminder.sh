@@ -100,7 +100,7 @@ FINAL_MESSAGE="*📅 Дни рождения:*"$'\n\n'
 for (( i=0; i<=$MAX_WEEKS; i++ )); do
     if [[ -n "${reminders[$i]}" ]]; then
         if [[ $i -eq 0 ]]; then
-            FINAL_MESSAGE+="*🎉Сегодня:*"$'\n'"${reminders[$i]}"$'\n'
+            FINAL_MESSAGE+="*🎉 Сегодня:*"$'\n'"${reminders[$i]}"$'\n'
         else
             weeks=$(pluralize $i "неделю" "недели" "недель")
             FINAL_MESSAGE+="*⏳ Через $weeks*:"$'\n'"${reminders[$i]}"$'\n'
